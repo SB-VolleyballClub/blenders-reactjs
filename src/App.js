@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-
+// import PropTypes from 'prop-types';
+import StuffList from './StuffList';
 
 /*
   Tournament Controls - option 1:
@@ -58,10 +59,13 @@ class BlendersTourn extends Component {
             <p className="App-intro">
                 To get stopped, edit <code>src/App.js</code> and save to reload (HaHa).
             </p>
+
             </div>
         );
     }
 }
+
+// <StuffList />
 
 class TournamentControlPanel extends Component {
     render(){
