@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {bindActionCreators} from 'redux'
 import './App.css';
 
 // import PropTypes from 'prop-types';
@@ -29,6 +30,10 @@ import StuffList from './StuffList';
     # of Playoff Brackets (2)
 */
 class BlendersTourn extends Component {
+    constructor(props){
+        super(props);
+        this.state = { 'just' : 0 };
+    }
     // myTeam(i){
     // return <Team />;
     // }
@@ -280,5 +285,13 @@ class MatchScore extends React.Component {
 //     );
 //   }
 // }
+
+function mapStateToProps(state) {
+  return {
+    tourn: state.tournament
+  };
+}
+
+// export default connect(mapStateToProps,[...later...])(BlendersTourn)
 
 export default BlendersTourn;
