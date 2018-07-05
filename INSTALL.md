@@ -32,5 +32,9 @@ Having trouble sorting out how to implement the StuffList.  Getting confused wit
 
 == Pass 2
 * https://github.com/tarique93102/react-redux-starter-template
+* https://reactjs.org/docs/react-component.html
+* https://github.com/reduxjs/redux/blob/master/docs/introduction/Examples.md
+* https://hackernoon.com/a-basic-react-redux-introductory-tutorial-adcc681eeb5e
+* https://medium.com/@rajaraodv/step-by-step-guide-to-building-react-redux-apps-using-mocks-48ca0f47f9a
 
 Want to take a look at this in more detail and maybe see about having a control panel page at the entry point which determines the # of teams in each pool and how those behave.  The submit would take you to the next page with the pools.
