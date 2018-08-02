@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {bindActionCreators} from 'redux'
+import { connect } from 'react-redux';
+
 import './App.css';
 
 // import PropTypes from 'prop-types';
@@ -234,45 +236,45 @@ class PlayoffBracket extends Component {
 //   }
 // }
 class MatchScore extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      t1: 0,
-      t2: 0
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            t1: 0,
+            t2: 0
+        };
 
-    this.handleInputChange = this.handleInputChange.bind(this);
-  }
+        this.handleInputChange = this.handleInputChange.bind(this);
+    }
 
-  handleInputChange(event) {
-    const target = event.target;
-    // const value = target.type === 'checkbox' ? target.checked : target.value;
-    const value = target.value;
-    const name = target.name;
+    handleInputChange(event) {
+        const target = event.target;
+        // const value = target.type === 'checkbox' ? target.checked : target.value;
+        const value = target.value;
+        const name = target.name;
 
-    this.setState({
-      [name]: value
-    });
-  }
+        this.setState({
+            [name]: value
+        });
+    }
 
-  render() {
-    return (
-      <form>
-          <input
-            name="t1"
-            type="number"
-            size="4"
-            value={this.state.t1}
-            onChange={this.handleInputChange} />
-          <input
-            name="t2"
-            type="number"
-            size="4"
-            value={this.state.t2}
-            onChange={this.handleInputChange} />
-      </form>
-    );
-  }
+    render() {
+        return (
+            <form>
+            <input
+                name="t1"
+                type="number"
+                size="4"
+                value={this.state.t1}
+                onChange={this.handleInputChange} />
+            <input
+                name="t2"
+                type="number"
+                size="4"
+                value={this.state.t2}
+                onChange={this.handleInputChange} />
+            </form>
+        );
+    }
 }
 // class Team extends Component {
 //   render(){
@@ -287,11 +289,11 @@ class MatchScore extends React.Component {
 // }
 
 function mapStateToProps(state) {
-  return {
-    tourn: state.tournament
-  };
+    return {
+        tourn: state.tournament
+    };
 }
 
-// export default connect(mapStateToProps,[...later...])(BlendersTourn)
+export default connect(mapStateToProps,)(BlendersTourn)
 
-export default BlendersTourn;
+// export default BlendersTourn;

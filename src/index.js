@@ -10,7 +10,7 @@ const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>
-        <BlendersTourn pools={ 2 } teamsPerPool={ 5 }/>
+        <BlendersTourn pools={ 2 } teamsPerPool={ 5 } date={ '2018-06-02' }/>
     </Provider>,
     document.getElementById('root')
 );
