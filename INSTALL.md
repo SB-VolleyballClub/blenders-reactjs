@@ -1,4 +1,4 @@
-== Installation
+## Installation
 Initial installation done in mid-2018 on a macOS-10.13.5 laptop
 
 Below are the commands issued:
@@ -17,7 +17,7 @@ cd sbvc
 npm start
 ```
 
-== Adding Redux
+## Adding Redux
 Used the following as a guide:
 * https://code.likeagirl.io/tutorial-for-adding-redux-to-a-react-app-1a94cc1738e5
 
@@ -26,4 +26,14 @@ git checkout -b addRedux  # create new branch
 npm add redux
 npm add react-redux
 npm add redux-thunk
+```
+
+## Coming in to a new install on a system with npm and node already installed
+Need to update npm and node
+```
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+
+npm install    # Installs modules per package.json
 ```
